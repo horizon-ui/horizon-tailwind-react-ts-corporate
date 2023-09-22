@@ -25,7 +25,7 @@ const Progress = (props: {
       } rounded-full bg-gray-200 dark:bg-navy-700`}
     >
       <div
-        className={`flex h-full items-center justify-center rounded-full ${
+        className={`flex h-full items-center justify-center rounded-md ${
           color === "red"
             ? "bg-red-500 dark:bg-red-400"
             : color === "blue"

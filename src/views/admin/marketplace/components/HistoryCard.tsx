@@ -55,13 +55,13 @@ const HistoryCard = () => {
   ];
 
   return (
-    <Card extra={"mt-3 !z-5 overflow-hidden"}>
+    <Card extra={"mt-3 !z-5 overflow-hidden px-4 pb-4"}>
       {/* HistoryCard Header */}
       <div className="flex items-center justify-between rounded-t-3xl p-3">
         <div className="text-lg font-bold text-navy-700 dark:text-white">
           History
         </div>
-        <button className="linear rounded-[20px] bg-lightPrimary px-4 py-2 text-base font-medium text-brand-500 transition duration-200 hover:bg-gray-100 active:bg-gray-200 dark:bg-white/5 dark:text-white dark:hover:bg-white/10 dark:active:bg-white/20">
+        <button className="linear rounded-md bg-lightPrimary px-4 py-2 text-base font-medium text-brand-500 transition duration-200 hover:bg-gray-100 active:bg-gray-200 dark:bg-white/5 dark:text-white dark:hover:bg-white/10 dark:active:bg-white/20">
           See all
         </button>
       </div>
@@ -69,11 +69,14 @@ const HistoryCard = () => {
       {/* History CardData */}
 
       {HistoryData.map((data, index) => (
-        <div className="flex h-full w-full items-start justify-between bg-white px-3 py-[20px] hover:shadow-2xl dark:!bg-navy-800 dark:shadow-none dark:hover:!bg-navy-700">
+        <div
+          key={index}
+          className="flex h-full w-full items-start justify-between rounded-md border-[1px] border-[transparent] bg-white px-3 py-[20px] transition-all duration-75 hover:border-gray-200 dark:!bg-navy-800 dark:hover:border-white/20"
+        >
           <div className="flex items-center gap-3">
             <div className="flex h-16 w-16 items-center justify-center">
               <img
-                className="h-full w-full rounded-xl"
+                className="h-full w-full rounded-md"
                 src={data.image}
                 alt=""
               />

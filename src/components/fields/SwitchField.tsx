@@ -4,11 +4,12 @@ const SwitchField = (props: {
   id: string;
   label: string;
   desc: string;
-  placeholder: string;
+  placeholder?: string;
   mt: any;
   mb: any;
+  onChange?: any;
 }) => {
-  const { id, label, desc, mt, mb } = props;
+  const { id, label, onChange, desc, mt, mb } = props;
   return (
     <div className={`flex justify-between ${mt} ${mb} items-center`}>
       <label
@@ -21,7 +22,7 @@ const SwitchField = (props: {
         <p className={`text-base text-gray-600`}>{desc}</p>
       </label>
       <div>
-        <Switch id={id} />
+        <Switch onChange={onChange} id={id} />
       </div>
     </div>
   );

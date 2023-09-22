@@ -1,5 +1,4 @@
 const Switch = (props: {
-  extra?: string;
   color?:
     | "red"
     | "blue"
@@ -15,9 +14,11 @@ const Switch = (props: {
     | "amber"
     | "indigo"
     | "gray";
+  id?: string;
+  extra?: string;
   [x: string]: any;
 }) => {
-  const { extra, color, ...rest } = props;
+  const { extra, id, color, ...rest } = props;
   return (
     <input
       type="checkbox"
